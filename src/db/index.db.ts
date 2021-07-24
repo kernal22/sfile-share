@@ -11,15 +11,12 @@ function connectionDb() {
   const MONGO_DB_PROTOCOL = process.env.MONGO_PROTOCOL;
 
   const URI = `${MONGO_DB_PROTOCOL}://${MONGO_DB_USER}:${MONGO_DB_PASS}@${MONGO_DB_HOST}/${MONGO_DB_DATABASE}`;
-  connect(
-    "mongodb://localhost:27017/fileSharing?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false",
-    {
-      useFindAndModify: true,
-      useNewUrlParser: true,
-      useCreateIndex: true,
-      useUnifiedTopology: true,
-    }
-  )
+  connect(URI, {
+    useFindAndModify: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  })
     .then(() => {
       console.log("database connected");
     })
