@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+
+<body>
+    <h1>hi</h1>
+    <img src="/static/images/download.png" alt="">
+    <div>
+        <% if(locals.err) {%>
+            <h4>
+                <%= err%>
+            </h4>
+            <% } else { %>
+                <p>Your file ready to download</p>
+                <p>Link will expire in 24 hours</p>
+                <div>
+                    <span>
+                        <%= fileName%>
+                    </span>
+                    <small>
+                        <%= parseInt(size/1000)%>KB
+                    </small>
+                </div>
+    </div>
+    <div>
+        <a href="<%= downloadLink%>">Download File</a>
+    </div>
+    <% } %>
+        <div>
+
+        </div>
+</body>
+
+</html>

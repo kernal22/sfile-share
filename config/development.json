@@ -1,0 +1,28 @@
+{
+    "app": {
+        "env": "development",
+        "port": 8800,
+        "appBaseUrl": "http://localhost:8800"
+    },
+    "mongo": {
+        "protocol": "mongodb",
+        "user": "root",
+        "password": "root",
+        "host": "localhost:27017",
+        "uri": "mongodb+srv://root:yCSAqv4SoVa5vv2u@file-sharing.9uowb.mongodb.net/fileSharing",
+        "database": "fileSharing"
+    },
+    "jwt": {
+      "secretKey": "",
+      "issuer": "sleepathon",
+      "expiresIn": "365 days",
+      "algorithm": "RS256",
+      "jwtId": "5d1947f3-9a05-496b-a6d1-8e811d084111"
+    },
+    "mail": {
+        "smtp_host": "smtp.sendgrid.net",
+        "smtp_port": "587",
+        "smtp_user": "apikey",
+        "smtp_password": "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"
+    }
+}
